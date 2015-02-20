@@ -29,32 +29,8 @@ Once the library has been instantiated, you can bind your javascript to the cust
 
 	
 ### Options ###
-The `updown()` function takes an options object as its single (optional) parameter.  Any of the following options can be set using the options parameter.
+The `updown()` function takes an options object as its single (optional) parameter.  For more details on the available options, please visit http://ponysmith.github.io/updown
 
-<table summary="Object properties for the updown.js constructor function parameter">
-	<thead>
-		<tr>
-			<th scope="col">Parameter</th>
-			<th scope="col">Type</th>
-			<th scope="col">Default</th>
-			<th scope="col">Description</th>
-		</tr>
-	</thead>
-	<tbody>
-        <tr>
-			<td>lag</td>
-			<td>int</td>
-			<td>100</td>
-			<td>Time in milliseconds to wait after a resize event finishes before checking for passed breakpoints.  The default of 100 should be fine in most cases.  Setting the number higher will improve performance but will create small delay before events are fired.</td>
-		</tr>		
-		<tr>
-			<td>breakpoints</td>
-			<td>array</td>
-			<td>[320,480,768,1024,1280]</td>
-			<td>Array of breakpoints to publish events for.  Any breakpoints passed in this parameter will be added to (not overwrite) the default</td>
-		</tr>		
-	</tbody>
-</table>
 
 
 		
