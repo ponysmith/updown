@@ -1,7 +1,22 @@
 {
   "name": "updown.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ponysmith/updown.git"
+  },
+  "scripts": {
+    "test": "karma start --single-run"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.5.0"
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "~3.0.7",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-phantomjs-launcher": "^1.0.1"
   }
 }
