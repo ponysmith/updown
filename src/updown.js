@@ -3,9 +3,9 @@
  * @author Pony Smith, pony@ponysmith.com
  */
 
-var updown = function(options) {
+var updown = function(breakpoints, options) {
 
-	var _options = { lag: 100, breakpoints: [320,480,768,1024,1280] }
+	var _options = { lag: 100 }
   var _breakpoints = [];
 	var _last = null;
 	var _current = null;
@@ -20,14 +20,15 @@ var updown = function(options) {
     /**
      * Initialize updown
      */
-		init: function(options) {
+		init: function(breakpoints, options) {
+      if(typeof breakpoints != 'object') throw new Error('You must provide an array of breakpoints');
 			// Extend options with user options
       for(o in options) {
         if(_options[o] != null) _options[o] = options[o];
       }
 
       // Filter out duplicate breakpoints
-      _options.breakpoints.forEach(function(v) {
+      breakpoints.forEach(function(v) {
         if(_breakpoints.indexOf(v) == -1) _breakpoints.push(v);
       });
 
@@ -137,7 +138,6 @@ var updown = function(options) {
 		}
 	}
 
-	// Instantiate
-	return _private.init(options);
+  return _private.init(breakpoints, options);
 
 }
